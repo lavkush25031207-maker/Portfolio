@@ -1,0 +1,38 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.7fr;
+  gap: 80px;
+}
+.about-copy p {
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+.about-tags {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.about-tags span {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  font-size: 11px;
+}
+.about-tags svg {
+  color: var(--accent);
+}
+@media (max-width: 800px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .about-grid h2 br {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .about-tags {
+    gap: 12px;
+  }
+}

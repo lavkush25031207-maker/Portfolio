@@ -1,0 +1,237 @@
+.hero {
+  position: relative;
+  padding: 98px 0 42px;
+  overflow: hidden;
+  padding-top: 102px;
+  background: radial-gradient(ellipse at 83% 42%, var(--accent-soft), transparent 52%), var(--bg);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+}
+.availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid var(--border);
+  padding: 9px 13px;
+  font-size: 11px;
+  letter-spacing: 0.2px;
+  margin-bottom: 27px;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: transparent;
+  border-radius: 30px;
+}
+.hero h1 {
+  font-size: clamp(40px, 4.6vw, 64px);
+  font-weight: 500;
+  line-height: 1.13;
+  letter-spacing: -2.8px;
+  margin-bottom: 23px;
+}
+.hero h1 > span {
+  white-space: nowrap;
+}
+.hero-role {
+  font-size: 21px;
+  line-height: 1.55;
+  margin-bottom: 16px;
+  color: var(--muted);
+}
+.hero-description {
+  font-size: 15px;
+  max-width: 420px;
+  margin-bottom: 28px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+}
+.hero-social {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+.hero-social > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: var(--muted);
+  margin-left: 5px;
+}
+.hero-facts {
+  display: flex;
+  gap: 52px;
+  margin-top: 42px;
+  padding-top: 27px;
+  border-top: 1px solid var(--border);
+  max-width: 425px;
+}
+.hero-facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hero-facts strong {
+  font-size: 25px;
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+.hero-facts span {
+  font-size: 11px;
+  color: var(--muted);
+}
+.scroll-cue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  color: var(--muted);
+  margin: 46px auto 0;
+  width: max-content;
+}
+.scroll-cue span {
+  font-size: 23px;
+  animation: nudge 2s ease-in-out infinite;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.22;
+  background-image: radial-gradient(var(--border) 0.8px, transparent 0.8px);
+  background-size: 24px 24px;
+  mask-image: linear-gradient(90deg, transparent 30%, #000);
+}
+.hero-copy > * {
+  animation: enter 800ms var(--ease-out) both;
+}
+.hero-copy > :nth-child(2) {
+  animation-delay: 80ms;
+}
+.hero-copy > :nth-child(3) {
+  animation-delay: 160ms;
+}
+.hero-copy > :nth-child(4) {
+  animation-delay: 240ms;
+}
+.hero-copy > :nth-child(5) {
+  animation-delay: 320ms;
+}
+.hero-copy > :nth-child(6) {
+  animation-delay: 400ms;
+}
+.hero-copy > :nth-child(7) {
+  animation-delay: 480ms;
+}
+.desktop-break {
+  display: initial;
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes nudge {
+  50% {
+    transform: translateY(5px);
+  }
+}
+@media (min-width: 1500px) {
+  .hero {
+    padding-top: 125px;
+    padding-bottom: 55px;
+  }
+}
+@media (max-width: 1050px) {
+  .hero-grid {
+    gap: 25px;
+    grid-template-columns: 1.25fr 1fr;
+  }
+  .hero h1 {
+    font-size: 48px;
+    letter-spacing: -2px;
+  }
+  .hero-facts {
+    gap: 35px;
+  }
+}
+@media (max-width: 800px) {
+  .hero {
+    padding-top: 55px;
+  }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 65px;
+  }
+  .hero-copy {
+    text-align: center;
+  }
+  .availability {
+    font-size: 10px;
+  }
+  .hero h1 {
+    font-size: clamp(37px, 7vw, 55px);
+  }
+  .hero-role {
+    font-size: 19px;
+  }
+  .hero-description {
+    margin-inline: auto;
+  }
+  .hero-buttons,
+  .hero-social,
+  .hero-facts {
+    justify-content: center;
+  }
+  .hero-facts {
+    gap: 45px;
+    margin-top: 30px;
+  }
+  .scroll-cue {
+    margin-top: 5px;
+  }
+  .hero-social > span {
+    font-size: 10px;
+  }
+  .hero {
+    padding-top: 56px;
+  }
+  .hero-facts {
+    margin-inline: auto;
+  }
+  .desktop-break {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 36px;
+    letter-spacing: -1.7px;
+  }
+  .hero-buttons {
+    gap: 8px;
+  }
+  .hero-facts {
+    gap: 27px;
+  }
+  .hero-facts span {
+    font-size: 10px;
+  }
+  .hero-social {
+    gap: 8px;
+  }
+}

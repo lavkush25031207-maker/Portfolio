@@ -1,0 +1,26 @@
+.journey-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 44px;
+}
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.column-heading {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+.column-heading svg {
+  color: var(--accent);
+}
+@media (max-width: 800px) {
+  .journey-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+}

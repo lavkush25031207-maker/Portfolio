@@ -1,0 +1,23 @@
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tags span {
+  padding: 7px 11px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--muted);
+  background: var(--surface);
+  font-size: 11px;
+  line-height: 1.4;
+  transition:
+    border-color 200ms,
+    color 200ms,
+    background 200ms;
+}
+.tags span:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+}

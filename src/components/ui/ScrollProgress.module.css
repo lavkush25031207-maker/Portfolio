@@ -1,0 +1,10 @@
+.progress {
+  position: fixed;
+  inset: 0 0 auto;
+  height: 3px;
+  z-index: 50;
+  pointer-events: none;
+  background: linear-gradient(90deg, var(--accent), #b8d4ac);
+  transform: scaleX(0);
+  transform-origin: left;
+}

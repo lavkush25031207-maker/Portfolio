@@ -1,0 +1,42 @@
+.date {
+  font-size: 10px;
+  color: var(--muted);
+}
+.education-list {
+  border-left: 1px solid var(--border);
+  margin-left: 7px;
+  padding-left: 27px;
+}
+.education-list article {
+  position: relative;
+  padding-bottom: 29px;
+}
+.education-list article:last-child {
+  padding-bottom: 0;
+}
+.education-list article:before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  background: var(--accent);
+  border: 3px solid var(--bg);
+  position: absolute;
+  left: -35px;
+  top: 1px;
+  border-radius: 50%;
+}
+.education-list h3 {
+  font-size: 16px;
+  margin: 10px 0 7px;
+}
+.education-list p {
+  font-size: 12px;
+  margin: 0;
+}
+
+.education-list article::before {
+  transition: box-shadow 300ms;
+}
+.education-list article:hover::before {
+  box-shadow: 0 0 0 5px var(--accent-soft);
+}

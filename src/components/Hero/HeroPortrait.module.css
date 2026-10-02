@@ -1,0 +1,138 @@
+.hero-visual {
+  position: relative;
+  justify-self: center;
+  width: 350px;
+  margin-bottom: 20px;
+  animation: portraitEnter 1s var(--ease-out) 150ms both;
+}
+.portrait-halo {
+  position: absolute;
+  inset: -55px;
+  border-radius: 50%;
+  filter: blur(18px);
+  background: radial-gradient(circle, #9db99750, transparent 68%);
+}
+.portrait-frame {
+  width: 350px;
+  height: 350px;
+  position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid var(--bg);
+  box-shadow: 0 25px 60px #1c242329;
+  background: #d8ddda;
+  border-width: 7px;
+  transition:
+    transform 700ms var(--ease-out),
+    box-shadow 700ms;
+}
+.portrait-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 32%;
+  transition: transform 900ms var(--ease-out);
+}
+.code-float {
+  position: absolute;
+  top: 12px;
+  left: 2px;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--bg);
+  box-shadow: var(--shadow);
+  color: var(--accent);
+  transform: rotate(-9deg);
+  animation: float 6s ease-in-out infinite;
+}
+.hire-badge {
+  position: absolute;
+  right: -20px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 21px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  box-shadow: 0 10px 25px #0002;
+  font-size: 12px;
+  animation: float 7s ease-in-out 1s infinite;
+}
+.hire-badge small {
+  display: block;
+  color: var(--muted);
+  font-size: 9px;
+  margin-top: 4px;
+}
+.portrait-caption {
+  display: block;
+  text-align: center;
+  position: absolute;
+  top: calc(100% + 42px);
+  width: 100%;
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 2.4px;
+}
+.portrait-frame:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 32px 80px #24483030;
+}
+.portrait-frame:hover img {
+  transform: scale(1.035);
+}
+@keyframes float {
+  0%,
+  100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -9px;
+  }
+}
+@keyframes portraitEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (max-width: 1050px) {
+  .hero-visual,
+  .portrait-frame {
+    width: 285px;
+  }
+  .portrait-frame {
+    height: 285px;
+  }
+}
+@media (max-width: 800px) {
+  .hero-visual {
+    grid-row: 2;
+    margin-bottom: 50px;
+  }
+  .hero-visual,
+  .portrait-frame {
+    width: 270px;
+  }
+  .portrait-frame {
+    height: 270px;
+  }
+  .portrait-caption {
+    top: calc(100% + 35px);
+  }
+}
+@media (max-width: 400px) {
+  .hire-badge {
+    right: -4px;
+  }
+}

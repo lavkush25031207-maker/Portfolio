@@ -1,0 +1,128 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--border);
+  background: var(--header-bg);
+  backdrop-filter: blur(20px);
+}
+.nav {
+  height: 82px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.links {
+  display: flex;
+  gap: 27px;
+  margin-left: auto;
+}
+.links a {
+  position: relative;
+  padding: 12px 0;
+  font-size: 13px;
+  color: var(--muted);
+  transition: color 200ms;
+}
+.links a::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 250ms var(--ease-out);
+}
+.links a:hover,
+.links a[aria-current] {
+  color: var(--text);
+}
+.links a:hover::after,
+.links a[aria-current]::after {
+  transform: scaleX(1);
+}
+.actions {
+  display: flex;
+  gap: 6px;
+}
+.iconButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  transition:
+    background 200ms,
+    transform 250ms;
+}
+.iconButton:hover {
+  background: var(--chip);
+  transform: rotate(10deg);
+}
+.menuToggle {
+  display: none;
+}
+@keyframes menuEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 1050px) {
+  .nav {
+    gap: 20px;
+  }
+  .links {
+    gap: 18px;
+  }
+}
+@media (max-width: 800px) {
+  .nav {
+    height: 70px;
+  }
+  .actions {
+    margin-left: auto;
+  }
+  .menuToggle {
+    display: inline-flex;
+  }
+  .links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    padding: 16px 24px 24px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+  }
+  .links.open {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    animation: menuEnter 220ms var(--ease-out);
+  }
+  .links a {
+    padding: 12px;
+    border-radius: 6px;
+  }
+  .links a[aria-current] {
+    background: var(--accent-soft);
+    color: var(--accent);
+  }
+  .links a::after {
+    display: none;
+  }
+}

@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family:
+    'Poppins',
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Arial,
+    sans-serif;
+  --font-mono: 'SFMono-Regular', Consolas, monospace;
+  --bg: #ffffff;
+  --surface: #f8fafc;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --accent: #2563eb;
+  --accent-soft: #eff6ff;
+  --chip: #f1f5f9;
+  --button: #0f172a;
+  --button-text: #ffffff;
+  --header-bg: #ffffffeb;
+  --shadow: 0 12px 35px -10px rgba(0,0,0,0.08);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  color: var(--text);
+  background: var(--bg);
+  color-scheme: light;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+:root[data-theme='dark'] {
+  --bg: #09090b;
+  --surface: #121214;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --border: #27272a;
+  --accent: #3b82f6;
+  --accent-soft: #1d4ed822;
+  --chip: #18181b;
+  --button: #ffffff;
+  --button-text: #09090b;
+  --header-bg: #09090beb;
+  --shadow: 0 20px 55px rgba(0,0,0,0.4);
+  color-scheme: dark;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 96px;
+}
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--bg);
+  color: var(--text);
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  cursor: pointer;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+svg {
+  flex-shrink: 0;
+}
+p {
+  color: var(--muted);
+  line-height: 1.85;
+}
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+h1,
+h2,
+h3 {
+  font-weight: 600;
+}
+h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+  margin-bottom: 20px;
+}
+a,
+button,
+input,
+textarea,
+summary {
+  outline-offset: 5px;
+}
+:focus-visible {
+  outline: 2px solid var(--accent);
+}
+section:focus {
+  outline: none;
+}
+::selection {
+  color: var(--text);
+  background: var(--accent-soft);
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

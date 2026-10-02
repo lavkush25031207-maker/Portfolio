@@ -1,0 +1,14 @@
+.counter {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.counter svg {
+  color: var(--accent);
+}

@@ -1,0 +1,24 @@
+.reveal {
+  min-width: 0;
+}
+.reveal[data-reveal='pending'] {
+  opacity: 0;
+  transform: translateY(40px);
+}
+.reveal[data-reveal='visible'] {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 800ms var(--ease-out) var(--reveal-delay),
+    transform 800ms var(--ease-out) var(--reveal-delay);
+}
+.reveal:focus-within {
+  opacity: 1;
+}
+@media (prefers-reduced-motion: reduce) {
+  .reveal[data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
