@@ -2,6 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
+  "type": "module",
   "homepage": "https://lavkush25031207-maker.github.io/Portfolio/",
   "scripts": {
     "predeploy": "npm run build",
