@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Portfolio/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#426c50" />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('portfolio-theme')
+        document.documentElement.dataset.theme =
+          savedTheme === 'dark' ||
+          (!savedTheme && matchMedia('(prefers-color-scheme: dark)').matches)
+            ? 'dark'
+            : 'light'
+      } catch {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
+    <meta name="description" content="Portfolio" />
+    <title>Portfolio</title>
+    <script type="module" crossorigin src="/Portfolio/assets/index-B0K456Ev.js"></script>
+    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-DXnOivbw.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
+
+
+
+
+
+
+
