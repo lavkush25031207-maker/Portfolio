@@ -1,6 +1,6 @@
 {
   "profile": { "name": "Lavkush Maurya", "role": "Front-End Developer", "email": "lovemaurya1437@gmail.com", "phone": "+917379404594", "displayPhone": "+91 73794 04594", "location": "South Delhi, India", "resume": "lavkush-maurya-resume.pdf", "portrait": "lavkush-maurya.png", "brandMark": "lm" },
-  "navigation": [{ "label": "Home", "id": "home" }, { "label": "About", "id": "about" }, { "label": "Skills", "id": "skills" }, { "label": "Experience", "id": "experience" }, { "label": "Projects", "id": "projects" }, { "label": "Gallery", "id": "gallery" }, { "label": "Contact", "id": "contact" }],
+  "navigation": [{ "label": "Projects", "id": "projects" }, { "label": "Skills", "id": "skills" }, { "label": "Experience", "id": "experience" }, { "label": "About", "id": "about" }, { "label": "Feedback", "id": "feedback" }, { "label": "Contact", "id": "contact" }],
   "skillGroups": [
     { "icon": "screen", "title": "Frontend Development", "skills": ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Framer Motion", "Responsive Design"] },
     { "icon": "code", "title": "Backend Development", "skills": ["Java", "Spring Boot", "RESTful APIs", "MySQL DB", "JDBC", "Hibernate"] },
@@ -9,8 +9,8 @@
     { "icon": "bot", "title": "AI & Prompt Engineering", "skills": ["Antigravity", "Gemini Code", "ChatGPT", "GitHub Copilot", "Claude AI"] }
   ],
   "projects": [
-    { "title": "Villofarm", "category": "GITHUB PAGES", "type": "shop", "description": "An e-commerce storefront for dairy products, focusing on a clean and accessible user interface.", "tags": ["HTML", "CSS", "JavaScript"], "details": ["Product-focused layout.", "Published as a GitHub Pages website."], "image": "https://api.microlink.io/?url=https://lavkush25031207-maker.github.io/villofarm/&screenshot=true&embed=screenshot.url", "liveUrl": "https://lavkush25031207-maker.github.io/villofarm/", "repositoryUrl": "https://github.com/lavkush25031207-maker/villofarm" },
-    { "title": "L2 Pro India", "category": "GITHUB PAGES", "type": "portfolio", "description": "A corporate landing page template designed for educational and professional services in India.", "tags": ["HTML", "CSS"], "details": ["Public GitHub repository.", "GitHub Pages enabled."], "image": "https://api.microlink.io/?url=https://lavkush25031207-maker.github.io/L2_pro_India/&screenshot=true&embed=screenshot.url", "liveUrl": "https://lavkush25031207-maker.github.io/L2_pro_India/", "repositoryUrl": "https://github.com/lavkush25031207-maker/L2_pro_India" },
+    { "title": "Villofarm", "category": "E-COMMERCE", "type": "shop", "description": "An e-commerce storefront for dairy products with a product-focused, accessible interface.", "tags": ["HTML", "CSS", "JavaScript"], "details": ["Built the product-focused layout and responsive interface.", "Published as a GitHub Pages website."], "image": "https://image.thum.io/get/width/1200/crop/675/noanimate/https://lavkush25031207-maker.github.io/villofarm/", "liveUrl": "https://lavkush25031207-maker.github.io/villofarm/", "repositoryUrl": "https://github.com/lavkush25031207-maker/villofarm" },
+    { "title": "L2 Pro India", "category": "SERVICE WEBSITE", "type": "portfolio", "description": "A responsive corporate landing page for educational and professional services.", "tags": ["HTML", "CSS"], "details": ["Created a structured marketing-page layout.", "Published as a GitHub Pages website."], "image": "https://image.thum.io/get/width/1200/crop/675/noanimate/https://lavkush25031207-maker.github.io/L2_pro_India/", "liveUrl": "https://lavkush25031207-maker.github.io/L2_pro_India/", "repositoryUrl": "https://github.com/lavkush25031207-maker/L2_pro_India" },
     { "title": "E-Book", "category": "GITHUB PAGES", "type": "portfolio", "description": "A dynamic, interactive web application simulating a physical book reading experience.", "tags": ["JavaScript", "HTML", "CSS"], "details": ["Book-inspired interface.", "GitHub Pages enabled."], "image": "https://api.microlink.io/?url=https://lavkush25031207-maker.github.io/e_book/&screenshot=true&embed=screenshot.url", "liveUrl": "https://lavkush25031207-maker.github.io/e_book/", "repositoryUrl": "https://github.com/lavkush25031207-maker/e_book" },
     { "title": "L2 Pro Saudi", "category": "GITHUB PAGES", "type": "portfolio", "description": "A responsive video streaming and course layout interface tailored for educational platforms.", "tags": ["HTML", "CSS", "JavaScript"], "details": ["Course content layout.", "GitHub Pages enabled."], "image": "https://api.microlink.io/?url=https://lavkush25031207-maker.github.io/L2_pro_saudi/&screenshot=true&embed=screenshot.url", "liveUrl": "https://lavkush25031207-maker.github.io/L2_pro_saudi/", "repositoryUrl": "https://github.com/lavkush25031207-maker/L2_pro_saudi" },
     { "title": "Tutedude Assignment 1", "category": "GITHUB PAGES", "type": "portfolio", "description": "A structural web design project demonstrating strong semantic HTML and CSS foundations.", "tags": ["HTML"], "details": ["Public GitHub repository.", "GitHub Pages enabled."], "image": "https://api.microlink.io/?url=https://lavkush25031207-maker.github.io/Tutedude_assignment_1/&screenshot=true&embed=screenshot.url", "liveUrl": "https://lavkush25031207-maker.github.io/Tutedude_assignment_1/", "repositoryUrl": "https://github.com/lavkush25031207-maker/Tutedude_assignment_1" },
@@ -22,7 +22,7 @@
     "projects": { "eyebrow": "SELECTED WORK", "title": "Featured Projects", "description": "A selection of projects showcasing my skills in building scalable, responsive, and accessible web applications." },
     "work": { "eyebrow": "CAREER", "title": "Professional Experience", "description": "My journey working with great teams and building products." },
     "experience": { "eyebrow": "LEARNING BY BUILDING", "title": "Experience & Education", "description": "A foundation in computer applications, strengthened by hands-on experience.", "workLabel": "Internships", "educationLabel": "Education & training" },
-    "gallery": { "eyebrow": "BEHIND THE SCENES", "title": "My Gallery", "description": "Moments from my journey, tech events, achievements, and a glimpse into my workspace." },
+    "feedback": { "eyebrow": "VISITOR FEEDBACK", "title": "Share your experience", "description": "Thoughts from visitors are welcome and reviewed before anything is displayed publicly." },
     "contact": { "eyebrow": "HAVE SOMETHING IN MIND?", "title": "Let's Work Together.", "description": "Have a project, an opportunity, or just want to say hello? I'd love to hear from you." }
   },
   "hero": { "availability": "Available for full-time & freelance work", "greeting": "Hello, I'm", "roleLead": "crafting thoughtful", "roleEnd": "digital experiences.", "description": "I engineer scalable, high-performance web applications using modern technologies. Passionate about clean code, intuitive UI/UX, and solving complex problems.", "resumeLabel": "Download Resume", "workLabel": "View My Work", "projectCountLabel": "Featured projects", "scrollLabel": "Scroll to explore", "facts": [{ "value": "BCA", "label": "Class of 2025" }, { "value": "2025", "label": "Frontend internship" }] },
@@ -48,40 +48,7 @@
     { "category": "INTERNSHIP", "date": "June – November 2025", "title": "Front-End Development Intern", "organization": "Dytus Academy", "details": ["Assisted in the development and maintenance of responsive client websites, ensuring cross-browser compatibility.", "Built reusable UI components and contributed to frontend architecture improvements.", "Participated in code reviews and adopted industry-standard agile workflows alongside senior engineers."], "tags": ["HTML", "CSS", "JavaScript", "Responsive UI"] }
   ],
   "education": [{ "date": "2025 / COMPLETED", "title": "Bachelor of Computer Application", "organization": "Dr. Ram Manohar Lohia Avadh University, Ayodhya" }, { "date": "2025 / CERTIFICATION", "title": "Frontend Developer Course", "organization": "Dytus Academy" }, { "date": "2022", "title": "Higher Secondary (10+2)", "organization": "State Board" }],
-  "gallery": [
-    {
-      "id": "cert-1",
-      "title": "Frontend Developer Course",
-      "description": "Successfully completed my rigorous training at Dytus Academy, mastering modern web development.",
-      "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=800",
-      "date": "Nov 2025",
-      "category": "Certificate"
-    },
-    {
-      "id": "setup-1",
-      "title": "My Coding Workspace",
-      "description": "Where the magic happens. A minimal setup to maintain focus and productivity.",
-      "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=800",
-      "date": "Sep 2025",
-      "category": "Setup"
-    },
-    {
-      "id": "hackathon-1",
-      "title": "Tech Meetup Delhi",
-      "description": "Connecting with fellow developers and learning about the latest in frontend architecture.",
-      "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800",
-      "date": "Aug 2025",
-      "category": "Event"
-    },
-    {
-      "id": "design-1",
-      "title": "UI Design Mockup",
-      "description": "A sneak peek into some of the user interfaces I design before writing code.",
-      "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80&w=800",
-      "date": "Jul 2025",
-      "category": "Design"
-    }
-  ],
+  "gallery": [],
   "contact": { "title": "Great things start with a conversation.", "description": "I'm open to full-time roles and freelance projects where I can contribute, collaborate, and keep growing.", "emailLabel": "Email", "phoneLabel": "Phone", "locationLabel": "Based in", "languages": "Let's connect in Hindi or English." },
   "socialLinks": [
     { "label": "GitHub", "url": "https://github.com/lavkush25031207-maker" },

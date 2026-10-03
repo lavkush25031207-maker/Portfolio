@@ -3,7 +3,7 @@
   margin-inline: auto;
 }
 .section {
-  padding: 100px 0;
+  padding: 88px 0;
   border-top: 1px solid var(--border);
 }
 .tinted {
@@ -69,7 +69,7 @@
     width: calc(100% - 40px);
   }
   .section {
-    padding: 68px 0;
+    padding: 48px 0;
   }
 }
 @media (max-width: 400px) {

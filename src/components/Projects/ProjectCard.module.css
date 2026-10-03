@@ -16,8 +16,12 @@
     box-shadow 450ms,
     border-color 450ms;
 }
+.project-card { display: flex; flex-direction: column; }
 .project-body {
   padding: 20px;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
 }
 .project-body > span {
   font-size: 9px;
@@ -37,28 +41,25 @@
   margin-top: 16px;
   padding-top: 12px;
 }
-.visitSite {
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 16px; }
+.primaryAction, .sourceAction {
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  margin-top: 16px;
   padding: 9px 13px;
   border-radius: 6px;
   background: var(--button);
   color: var(--button-text);
   font-size: 12px;
   font-weight: 600;
-  opacity: 0;
-  transform: translateY(7px);
-  pointer-events: none;
   transition:
-    opacity 200ms,
-    transform 200ms,
     background 200ms;
 }
-.visitSite:hover {
+.primaryAction:hover {
   background: var(--accent);
 }
+.sourceAction { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.sourceAction:hover { border-color: var(--accent); color: var(--accent); }
 .project-body summary {
   cursor: pointer;
   display: flex;
@@ -83,12 +84,6 @@
   box-shadow: var(--shadow);
   border-color: var(--accent);
 }
-.project-card:hover .visitSite,
-.project-card:focus-within .visitSite {
-  opacity: 1;
-  transform: none;
-  pointer-events: auto;
-}
 .project-body summary span {
   transition: transform 250ms;
 }
@@ -108,10 +103,5 @@
 @media (max-width: 800px) {
   .project-body > p {
     min-height: 0;
-  }
-  .visitSite {
-    opacity: 1;
-    transform: none;
-    pointer-events: auto;
   }
 }

@@ -16,12 +16,24 @@ export default function Projects() {
       <div className={layout['container']}>
         <SectionHeading {...sections.projects} />
         <div className={styles['projects-grid']}>
-          {projects.map((project, index) => (
+          {projects.slice(0, 4).map((project, index) => (
             <Reveal key={project.title} delay={index * 130}>
               <ProjectCard project={project} index={index} />
             </Reveal>
           ))}
         </div>
+        {projects.length > 4 && (
+          <div className={styles.moreProjects}>
+            <h3>More Projects</h3>
+            <div className={styles['projects-grid']}>
+              {projects.slice(4).map((project, index) => (
+                <Reveal key={project.title} delay={index * 100}>
+                  <ProjectCard project={project} index={index + 4} />
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   )

@@ -1,0 +1,38 @@
+.grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: 28px; align-items: start; }
+.reviewArea { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.reviewArea > p { grid-column: 1 / -1; margin: 0; }
+.emptyState {
+  display: flex;
+  grid-column: 1 / -1;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: 315px;
+  padding: 42px;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  background: var(--bg);
+}
+.emptyIcon { color: var(--accent); font-size: 34px; line-height: 1; }
+.emptyState h3 { margin: 18px 0 8px; font-size: 20px; }
+.emptyState p { max-width: 400px; margin: 0; font-size: 14px; }
+.emptyState > span:last-child { margin-top: 18px; color: var(--accent); font-size: 12px; font-weight: 500; }
+.review, .form { border: 1px solid var(--border); background: var(--bg); border-radius: 14px; box-shadow: var(--shadow); }
+.review { padding: 20px; min-height: 170px; }
+.review div { display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 14px; }
+.review span { color: #d99716; letter-spacing: 1px; font-size: 12px; }
+.review p { margin: 16px 0 0; font-size: 14px; line-height: 1.65; }
+.form { padding: 24px; }
+.form h3 { font-size: 18px; margin-bottom: 18px; }
+.form label { display: flex; flex-direction: column; gap: 7px; font-size: 12px; margin-bottom: 14px; }
+.form label > span { color: var(--muted); font-weight: 400; }
+.form input, .form textarea, .form select { width: 100%; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--text); padding: 10px 11px; }
+.form textarea { resize: vertical; }
+.form .consent { flex-direction: row; align-items: flex-start; line-height: 1.45; }
+.consent input { width: auto; margin-top: 2px; }
+.form > button { width: 100%; }
+.form > p { font-size: 12px; line-height: 1.5; margin: 12px 0 0; }
+.error { color: #c2410c !important; }
+.honeypot { position: absolute; left: -9999px; opacity: 0; }
+@media (max-width: 1050px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 800px) { .reviewArea { grid-template-columns: 1fr; } }

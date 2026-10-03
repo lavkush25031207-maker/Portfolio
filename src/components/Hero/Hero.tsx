@@ -30,11 +30,11 @@ export default function Hero() {
           </p>
           <p className={styles['hero-description']}>{hero.description}</p>
           <div className={styles['hero-buttons']}>
-            <Button onClick={() => downloadResume(portfolioData)}>
-              <Icon name="down" size={17} /> {hero.resumeLabel}
-            </Button>
-            <Button variant="secondary" href="#projects">
+            <Button href="#projects">
               {hero.workLabel} <Icon name="arrow" size={17} />
+            </Button>
+            <Button variant="secondary" onClick={() => downloadResume(portfolioData)}>
+              <Icon name="down" size={17} /> {hero.resumeLabel}
             </Button>
           </div>
           <div className={styles['hero-social']}>
@@ -61,12 +61,6 @@ export default function Hero() {
               <strong>{String(projects.length).padStart(2, '0')}</strong>
               <span>{hero.projectCountLabel}</span>
             </div>
-            {hero.facts.map((fact) => (
-              <div key={fact.label}>
-                <strong>{fact.value}</strong>
-                <span>{fact.label}</span>
-              </div>
-            ))}
           </div>
         </div>
         <HeroPortrait />

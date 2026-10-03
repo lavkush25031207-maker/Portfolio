@@ -48,7 +48,7 @@ export default function Contact() {
               </div>
               <div className={styles['language-note']}>{contact.languages}</div>
               <div className={styles['social-links']} aria-label="Social links">
-                {socialLinks.map((link) => (
+                {socialLinks.filter((link) => ['GitHub', 'LinkedIn'].includes(link.label)).map((link) => (
                   <a key={link.url} href={link.url} target="_blank" rel="noreferrer">
                     {link.label} ↗
                   </a>

@@ -10,8 +10,8 @@
     Arial,
     sans-serif;
   --font-mono: 'SFMono-Regular', Consolas, monospace;
-  --bg: #ffffff;
-  --surface: #f8fafc;
+  --bg: #fcfbf8;
+  --surface: #f5f4f0;
   --text: #0f172a;
   --muted: #64748b;
   --border: #e2e8f0;
@@ -79,7 +79,8 @@ svg {
 }
 p {
   color: var(--muted);
-  line-height: 1.85;
+  font-size: 16px;
+  line-height: 1.75;
 }
 h1,
 h2,
