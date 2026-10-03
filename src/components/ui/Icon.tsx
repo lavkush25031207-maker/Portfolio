@@ -3,6 +3,7 @@ export default function Icon({ name, size = 20 }: { name: string; size?: number 
     arrow: 'M7 17 17 7M7 7h10v10',
     down: 'M12 3v12m-5-5 5 5 5-5M5 16v5h14v-5',
     mail: 'M3 5h18v14H3zM3 5l9 8 9-8',
+    message: 'M21 11.5a8.4 8.4 0 0 1-9 8.4 9.8 9.8 0 0 1-4-.9L3 21l1.7-4.2A8.2 8.2 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z',
     phone: 'M5 3h4l2 5-3 2a15 15 0 0 0 6 6l2-3 5 2v4c-10 3-21-8-16-16Z',
     pin: 'M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0ZM15 10a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z',
     code: 'm8 6-6 6 6 6m8-12 6 6-6 6M14 3l-4 18',
