@@ -3,8 +3,6 @@
   "navigation": [{ "label": "Projects", "id": "projects" }, { "label": "Skills", "id": "skills" }, { "label": "Experience", "id": "experience" }, { "label": "About", "id": "about" }, { "label": "Feedback", "id": "feedback" }, { "label": "Contact", "id": "contact" }],
   "skillGroups": [
     { "icon": "screen", "title": "Frontend Development", "skills": ["React", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Framer Motion", "Responsive Design"] },
-    { "icon": "code", "title": "Backend Development", "skills": ["Java", "Spring Boot", "RESTful APIs", "MySQL DB", "JDBC", "Hibernate"] },
-    { "icon": "zap", "title": "System Design & Architecture", "skills": ["System Architecture", "API Design", "Microservices", "Database Modeling", "Scalability"] },
     { "icon": "briefcase", "title": "Tools & Collaboration", "skills": ["Git", "GitHub", "VS Code", "Postman", "DevTools", "Agile/Scrum"] },
     { "icon": "bot", "title": "AI & Prompt Engineering", "skills": ["Antigravity", "Gemini Code", "ChatGPT", "GitHub Copilot", "Claude AI"] }
   ],
