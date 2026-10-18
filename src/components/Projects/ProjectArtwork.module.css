@@ -1,12 +1,66 @@
-.projectArt { position: relative; height: 190px; overflow: hidden; padding: 18px; background: var(--accent-soft); }
+.projectArt { position: relative; height: 260px; overflow: hidden; padding: 18px; background: var(--accent-soft); }
 .browser { height: 100%; overflow: hidden; border: 1px solid color-mix(in srgb, var(--accent) 24%, var(--border)); border-radius: 10px; background: var(--bg); box-shadow: 0 14px 24px -16px rgba(15, 23, 42, .55); }
 .browserBar { display: flex; align-items: center; gap: 5px; height: 29px; padding: 0 10px; border-bottom: 1px solid var(--border); background: var(--surface); }
 .browserBar i { width: 6px; height: 6px; border-radius: 50%; background: var(--border); }
 .browserBar span { overflow: hidden; margin-left: 5px; color: var(--muted); font-size: 9px; text-overflow: ellipsis; white-space: nowrap; }
-.preview { display: flex; flex-direction: column; align-items: flex-start; height: calc(100% - 29px); padding: 23px; background: linear-gradient(125deg, var(--bg), var(--accent-soft)); }
+.preview { position: relative; height: calc(100% - 29px); overflow: hidden; }
+
+/* Live iframe preview */
+.iframeWrap { position: relative; width: 100%; height: 100%; overflow: hidden; }
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1280px;
+  height: 800px;
+  border: none;
+  transform-origin: 0 0;
+  transform: scale(0.25);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 600ms ease;
+}
+.iframeLoaded { opacity: 1; }
+.iframeOverlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg, transparent 50%, color-mix(in srgb, var(--bg) 80%, transparent) 100%);
+  z-index: 1;
+}
+
+/* Loading skeleton */
+.iframeSkeleton {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(125deg, var(--bg), var(--accent-soft));
+  overflow: hidden;
+}
+.shimmer {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, color-mix(in srgb, var(--accent) 10%, transparent) 50%, transparent 100%);
+  animation: shimmerAnim 1.5s infinite;
+}
+@keyframes shimmerAnim {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+/* Fallback styled hero (if iframe fails) */
+.fallback { display: flex; flex-direction: column; align-items: flex-start; height: 100%; padding: 22px 23px; background: linear-gradient(125deg, var(--bg), var(--accent-soft)); }
 .category { color: var(--accent); font: 600 9px var(--font-mono); letter-spacing: 1.2px; }
-.preview strong { max-width: 220px; margin-top: 10px; color: var(--text); font-size: 21px; line-height: 1.12; letter-spacing: -.7px; }
+.fallback strong { max-width: 220px; margin-top: 10px; color: var(--text); font-size: 21px; line-height: 1.12; letter-spacing: -.7px; }
+.fallback p { max-width: 230px; margin: 10px 0 0; color: var(--muted); font-size: 9px; line-height: 1.45; }
+.previewFooter { display: flex; align-items: flex-end; justify-content: space-between; width: 100%; gap: 10px; margin-top: auto; }
+.previewAction { display: inline-flex; align-items: center; gap: 5px; color: var(--text); font-size: 9px; font-weight: 700; }
+.previewAction b { color: var(--accent); font-size: 12px; }
 .lines { display: grid; gap: 6px; width: 100%; margin-top: auto; }
 .lines i { display: block; width: 85%; height: 5px; border-radius: 20px; background: var(--border); }
 .lines i:nth-child(2) { width: 66%; }.lines i:nth-child(3) { width: 45%; background: var(--accent); opacity: .55; }
-.projectNumber { position: absolute; right: 30px; bottom: 28px; color: var(--accent); font: 600 10px var(--font-mono); letter-spacing: 1px; }
+.projectNumber { position: absolute; right: 30px; bottom: 28px; color: var(--accent); font: 600 10px var(--font-mono); letter-spacing: 1px; z-index: 2; }
+
+@media (min-width: 600px) {
+  .projectArt { height: 280px; }
+  .iframe { transform: scale(0.28); }
+}
