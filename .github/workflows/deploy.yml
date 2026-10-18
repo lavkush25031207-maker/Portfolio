@@ -33,6 +33,8 @@ jobs:
 
       - name: Build project
         run: npm run build
+        env:
+          VITE_FEEDBACK_API_URL: https://lavkushmaurya.vercel.app/api/feedback
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v4

@@ -49,6 +49,14 @@
 .contact-form > button {
   width: 100%;
 }
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+}
+.error {
+  color: #c2410c;
+}
 .contact-form input:hover,
 .contact-form textarea:hover {
   border-color: var(--accent);

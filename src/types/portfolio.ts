@@ -20,6 +20,10 @@ export type PortfolioData = {
     tags: string[]
     details: string[]
     image: string
+    heroEyebrow?: string
+    heroTitle?: string
+    heroDescription?: string
+    heroAction?: string
     liveUrl?: string
     repositoryUrl: string
   }[]
